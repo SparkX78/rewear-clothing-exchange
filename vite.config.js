@@ -1,6 +1,7 @@
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-/** @type {import('vite').UserConfig} */
-export default {
+export default defineConfig({
   plugins: [react()],
-};
+  base: './', // 👈 This fixes the 404 error on Netlify
+});
