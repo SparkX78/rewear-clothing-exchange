@@ -1,8 +1,11 @@
-// vite.config.js
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: '/rewear-clothing-exchange/',
   plugins: [react()],
-  base: './', // ✅ very important for Netlify
-});
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true
+  }
+})
